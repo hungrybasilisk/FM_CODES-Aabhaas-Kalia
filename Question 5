@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{   // declaring variables
+    char s[100];
+    int i, j ,n,flag=1;
+    //Requesting for a string
+    printf("Enter the string:");
+    gets(s);
+    //Runnig for loop to check if the chara cters starting from each end of the string are the same
+    for (i=0;s[i]!='\0';i++);
+        n=i;
+
+    for (i=0;i<n/2;i++)
+        {
+            if (s[i]!=s[n-i-1])
+            {
+            flag=0;
+            break;
+            }
+        }
+
+    if (flag==1)
+    printf("%s is a palindrome",s);
+    else
+    printf("%s is not a palindrome",s);
+}
