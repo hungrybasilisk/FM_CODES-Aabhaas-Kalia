@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+long int multiply(int n);
+int main()
+{
+    int n;
+    // Requesting input from user
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    // Printing the factorial as required
+    printf("Factorial of %d = %ld\n", n, multiply(n));
+    return 0;
+}
+// Function to calculate the factorial 
+long int multiply(int n)
+ {
+    if (n>=1)
+        return n*multiply(n-1);
+    else
+        return 1;
+}
