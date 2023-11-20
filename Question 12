@@ -3,29 +3,29 @@
 // main function
 void main()
 {
-//Declaring variables
-char file[100], current;
-int wordCount = 0, i = 1;
-//Pointer for reading file
+    //Declaring variables
+    char file[100], current;
+    int wordCount = 0, i = 1;
+    //Pointer for reading file
 FILE* ptr;
-//Reading the file provided
-ptr = fopen("*file*", "r");
-//Write contents of the file to buffer
-fgets(file, 100, ptr);
-// initialize variable
-current = file[i];
+    //Reading the file provided
+    ptr = fopen("*file*", "r");
+    //Write contents of the file to buffer
+    fgets(file, 100, ptr);
+    // initialize variable
+    current = file[i];
 // loop until the end of the stream
 while (current != '\0')
 {
-// Counting the numbers of words by using a space as an indicator that it's a new word now
-if (current == ' ')
-wordCount++;
-current = file[i];
-i++;
+    // Counting the numbers of words by using a space as an indicator that it's a new word now
+    if (current == ' ')
+    wordCount++;
+    current = file[i];
+    i++;
 }
 // edge case where if the stream ends with a space, one more than the number is counted
 if (file[i - 2] != ' ')
-wordCount++;
-// print the number of words in the string
-printf("The word count in the file \"*file*\" is %d.", wordCount);
+    wordCount++;
+    // print the number of words in the string
+    printf("The word count in the file \"*file*\" is %d.", wordCount);
 }
