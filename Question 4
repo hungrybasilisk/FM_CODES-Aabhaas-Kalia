@@ -1,0 +1,32 @@
+// Adding libraries
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    // Declaring a character aray 'str' with size 200
+    char str[200];
+    // Declaring a variable that accepts only integers
+    int vowelsCount = 0;
+
+    // Taking input from the user
+    printf("Enter a string: ");
+    // Reading the string entered by the user
+    gets(str);
+
+    // Loop to go through the characters and check for vowels
+    for (int i = 0; i < strlen(str); i++) {
+            // Converting all characters to lowercase
+        char currentChar = tolower(str[i]);  
+
+        // IF statement comparing the characters to the vowels embedded in the code
+        if (currentChar == 'a' || currentChar == 'e' || currentChar == 'i' || currentChar == 'o' || currentChar == 'u') {
+            vowelsCount++;
+        }
+    }
+
+    // Output the result
+    printf("Number of vowels in the string: %d\n", vowelsCount);
+
+    return 0;
+}
