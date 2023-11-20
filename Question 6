@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+void swappingTheInt(int*, int*);
+
+int main()
+{   // Declaring variables
+    int a, b;
+    //Requesting for variables and asigning them to a and b
+    printf("Enter values for a and b\n");
+    scanf("%d%d", &a, &b);
+    //Showing variable content before swapping
+    printf("\n\nBefore swapping: a = %d and b = %d\n", a, b);
+    //Swapping
+    swappingTheInt(&a, &b);
+    //Showign variable content after swapping
+    printf("\nAfter swapping: a = %d and b = %d\n", a, b);
+
+    return 0;
+}
+
+void swappingTheInt(int *x, int *y)
+{
+    int temp;
+
+    temp = *x;
+    *x   = *y;
+    *y   = temp;
+}
