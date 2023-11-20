@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+ {
+     // Declaring variables
+    char str[100];
+    int i;
+    char c;
+    double d;
+    // Requesting a string and assigning it to the variable str
+    printf("Enter a string: ");
+    scanf("%s", str);
+    // Requesting an integer and assigning it to the variable i
+    printf("Enter an integer: ");
+    scanf("%d", &i);
+    // Requesting a character and assigning it to variable c
+    printf("Enter a character: ");
+    scanf(" %c", &c);
+    // Requesting a double and assigning it to variable d
+    printf("Enter a double: ");
+    scanf("%lf", &d);
+
+    // Output the input values
+    printf("\nYou entered:\n");
+    printf("String: %s\n", str);
+    printf("Integer: %d\n", i);
+    printf("Character: %c\n", c);
+    printf("Double: %lf\n", d);
+
+    return 0;
+}
